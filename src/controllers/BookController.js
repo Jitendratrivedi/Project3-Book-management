@@ -22,13 +22,7 @@ const createbooks = async function (req, res) {
         return res.status(400).send({status:false,msg:"No Book details given"})
     }
 
-    if(typeof data.title!=String) return res.status(400).send({status:false,message:"only string type title allowed"})
-      
-    if(typeof data.excerpt!=String) return res.status(400).send({status:false,message:"only string type excerpt allowed"}) 
-    
-    if(typeof data.category!=String) return res.status(400).send({status:false,message:"only string type category allowed"}) 
-    
-    if(typeof data.ISBN!=String) return res.status(400).send({status:false,message:"only string type ISBN allowed"}) 
+ 
     
     
     if(!validator.isValid(data.title)){
